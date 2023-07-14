@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pokemon of type <code data-th-text="${type}"></code></h1>
+
+    <div>
+        <ul>
+            <li data-th-each="pokemon : ${pokemonByType}">
+                <img data-th-src="${pokemon.img}" width="100">
+                <h4 data-th-text="${pokemon.id}"></h4>
+                <h4 data-th-text="${pokemon.name}"></h4>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
